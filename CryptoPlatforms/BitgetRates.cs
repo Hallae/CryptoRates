@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CryptoRates
+namespace CryptoRates.CryptoPlatforms
 {
     public sealed class BitgetExchangeRates : Exchange
     {
