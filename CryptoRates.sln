@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoRates", "CryptoRates.csproj", "{6C96B29F-5188-489B-935E-9FD3BC12A7FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C96B29F-5188-489B-935E-9FD3BC12A7FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C96B29F-5188-489B-935E-9FD3BC12A7FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C96B29F-5188-489B-935E-9FD3BC12A7FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C96B29F-5188-489B-935E-9FD3BC12A7FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C88F6DE4-2ABF-4D71-94C8-7E2B903BAB1D}
+	EndGlobalSection
+EndGlobal
