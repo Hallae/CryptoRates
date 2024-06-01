@@ -24,7 +24,7 @@ namespace CryptoRates.CryptoPlatforms
             {
                 var restClient = new BitgetRestClient(); ;
                 var tickerResult = await restClient.SpotApi.ExchangeData.GetTickerAsync("BTCUSDT");
-                var lastPrice = tickerResult.Data.ClosePrice;
+             
                 return tickerResult.Data?.ClosePrice ?? 0;
 
 

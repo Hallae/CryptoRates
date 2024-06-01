@@ -21,7 +21,7 @@ namespace CryptoRates.CryptoPlatforms
 
                 var restClient = new KucoinRestClient();
                 var tickerResult = await restClient.SpotApi.ExchangeData.GetTickerAsync("BTCUSDT");
-                var lastPrice = tickerResult.Data.LastPrice;
+              
                 return tickerResult.Data?.LastPrice ?? 0;
             }
             catch (Exception)
