@@ -7,16 +7,10 @@ using System.Threading.Tasks;
 
 namespace CryptoRates.CryptoPlatforms
 {
-    public sealed class BitgetExchangeRates : Exchange
+    public sealed class BitgetExchangeRates(IResultPresenter resultPresenter) : Exchange(resultPresenter)
     {
         private readonly BitgetRestClient client = new();
         public override string Name => "Bitget";
-        public BitgetExchangeRates(IResultPresenter resultPresenter) : base(resultPresenter)
-        {
-        }
-
-
-
 
         protected override async Task<decimal> Update()
         {

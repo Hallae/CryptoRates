@@ -7,16 +7,11 @@ using System.Threading.Tasks;
 
 namespace CryptoRates.CryptoPlatforms
 {
-    public sealed class BybitExchangeRates : Exchange
+    public sealed class BybitExchangeRates(IResultPresenter resultPresenter) : Exchange(resultPresenter)
     {
         private readonly BybitRestClient _client = new();
 
         public override string Name => "Bybit";
-
-        public BybitExchangeRates(IResultPresenter resultPresenter) : base(resultPresenter)
-        {
-        }
-
 
         protected override async Task<decimal> Update()
         {

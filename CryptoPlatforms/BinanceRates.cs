@@ -7,15 +7,10 @@ using System.Threading.Tasks;
 
 namespace CryptoRates.CryptoPlatforms
 {
-    public sealed class BinanceExchangeRates : Exchange
+    public sealed class BinanceExchangeRates(IResultPresenter resultPresenter) : Exchange(resultPresenter)
     {
         private readonly BinanceRestClient client = new();
         public override string Name => "Binance";
-        public BinanceExchangeRates(IResultPresenter resultPresenter) : base(resultPresenter)
-        {
-        }
-
-
 
         protected override async Task<decimal> Update()
         {

@@ -7,13 +7,11 @@ using System.Threading.Tasks;
 
 namespace CryptoRates.CryptoPlatforms
 {
-    public sealed class KucoinExchangeRates : Exchange
+    public sealed class KucoinExchangeRates(IResultPresenter resultPresenter) : Exchange(resultPresenter)
     {
         private readonly KucoinRestClient _client = new();
         public override string Name => "Kucoin";
-        public KucoinExchangeRates(IResultPresenter resultPresenter) : base(resultPresenter)
-        {
-        }
+
         protected override async Task<decimal> Update()
         {
             try
