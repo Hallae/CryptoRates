@@ -22,11 +22,13 @@ namespace CryptoRates
             var binance = new BinanceExchangeRates(new LabelResultPresenter(BinanceLabel));
             var bybit = new BybitExchangeRates(new LabelResultPresenter(BybitLabel));
             var kucoin = new KucoinExchangeRates(new LabelResultPresenter(KucoinLabel));
-            var bitget = new BitgetExchangeRates(new LabelResultPresenter(BitgetLabel));
+            var Bitget = new BitgetExchangeRates(new LabelResultPresenter(BitgetLabel));
+          
             binance.Start();
             bybit.Start();
             kucoin.Start();
-            bitget.Start();
+            Bitget.Start();
+       
         }
 
         private void BinanceLabel_Click(object sender, EventArgs e)
@@ -44,10 +46,11 @@ namespace CryptoRates
 
         }
 
-         private void BitgetLabel_Click(object sender, EventArgs e)
-         {
+        private void BitgetLabel_Click(object sender, EventArgs e)
+        {
 
-         }
+        }
+         
      
     }
 }

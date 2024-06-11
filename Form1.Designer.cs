@@ -30,8 +30,8 @@
         {
             BinanceLabel = new Label();
             BybitLabel = new Label();
-            BitgetLabel = new Label();
             KucoinLabel = new Label();
+            BitgetLabel = new Label();
             SuspendLayout();
             // 
             // BinanceLabel
@@ -58,37 +58,36 @@
             BybitLabel.Text = "Bybit";
             BybitLabel.Click += BybitLabel_Click;
             // 
+            // KucoinLabel
+            // 
+            KucoinLabel.AutoSize = true;
+            KucoinLabel.Font = new Font("Segoe UI", 24F);
+            KucoinLabel.Location = new Point(7, 117);
+            KucoinLabel.Margin = new Padding(9, 0, 9, 0);
+            KucoinLabel.Name = "KucoinLabel";
+            KucoinLabel.Size = new Size(154, 54);
+            KucoinLabel.TabIndex = 2;
+            KucoinLabel.Text = " Kucoin";
+            KucoinLabel.Click += KucoinLabel_Click;
+            // 
             // BitgetLabel
             // 
             BitgetLabel.AutoSize = true;
             BitgetLabel.Font = new Font("Segoe UI", 24F);
-            BitgetLabel.Location = new Point(18, 117);
-            BitgetLabel.Margin = new Padding(9, 0, 9, 0);
+            BitgetLabel.Location = new Point(18, 171);
             BitgetLabel.Name = "BitgetLabel";
             BitgetLabel.Size = new Size(129, 54);
             BitgetLabel.TabIndex = 2;
             BitgetLabel.Text = "Bitget";
             BitgetLabel.Click += BitgetLabel_Click;
             // 
-            // KucoinLabel
-            // 
-            KucoinLabel.AutoSize = true;
-            KucoinLabel.Font = new Font("Segoe UI", 24F);
-            KucoinLabel.Location = new Point(18, 117);
-            KucoinLabel.Margin = new Padding(9, 0, 9, 0);
-            KucoinLabel.Name = " KucoinLabel";
-            KucoinLabel.Size = new Size(129, 54);
-            KucoinLabel.TabIndex = 2;
-            KucoinLabel.Text = " Kucoin";
-            KucoinLabel.Click += KucoinLabel_Click;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(23F, 57F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(498, 333);
-            Controls.Add(KucoinLabel);
             Controls.Add(BitgetLabel);
+            Controls.Add(KucoinLabel);
             Controls.Add(BybitLabel);
             Controls.Add(BinanceLabel);
             Font = new Font("Segoe UI", 25F);
@@ -103,7 +102,7 @@
 
         private Label BinanceLabel;
         private Label BybitLabel;
-        private Label BitgetLabel;
         private Label KucoinLabel;
+        private Label BitgetLabel;
     }
 }

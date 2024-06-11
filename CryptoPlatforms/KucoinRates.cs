@@ -9,7 +9,7 @@ namespace CryptoRates.CryptoPlatforms
 {
     public sealed class KucoinExchangeRates : Exchange
     {
-        private readonly KucoinRestClient client = new();
+        private readonly KucoinRestClient _client = new();
         public override string Name => "Kucoin";
         public KucoinExchangeRates(IResultPresenter resultPresenter) : base(resultPresenter)
         {
@@ -18,16 +18,16 @@ namespace CryptoRates.CryptoPlatforms
         {
             try
             {
-
-                var restClient = new KucoinRestClient();
-                var tickerResult = await restClient.SpotApi.ExchangeData.GetTickerAsync("BTCUSDT");
+                var usdFuturesTradeHistoryData = await _client.FuturesApi.ExchangeData.GetTickerAsync("BTCUSDT");
+                return usdFuturesTradeHistoryData.Data?.Price ?? 0;
+               
               
-                return tickerResult.Data?.LastPrice ?? 0;
+            
             }
             catch (Exception)
             {
 
-                return 0;
+                return 0; // Null Data from api
             }
         }
     }

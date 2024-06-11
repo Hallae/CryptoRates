@@ -28,7 +28,7 @@ namespace CryptoRates.CryptoPlatforms
             }
             catch (Exception)
             {
-                return 0;
+                return 0;// Null Data from api
             }
         }
     }
